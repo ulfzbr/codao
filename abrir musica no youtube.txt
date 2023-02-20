@@ -1,0 +1,16 @@
+import webbrowser
+import pyautogui
+import time
+
+# URL da música no YouTube
+url = "https://www.youtube.com/watch?v=_pWuaBkufr0"
+
+# Abrir o navegador com a URL
+webbrowser.open(url)
+
+# Aguardar o site carregar
+time.sleep(5)
+
+# Localizar a posição do botão de reprodução e clicar nele
+play_button_pos = pyautogui.locateOnScreen('play_button.png')
+pyautogui.click(play_button_pos)
